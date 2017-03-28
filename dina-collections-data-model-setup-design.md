@@ -64,11 +64,11 @@ We should use well-defined data object names so that we will not have to change 
 
 Write all object names in lowercase alphanumeric characters and use underscore "_" to separate words.
 
-##### Pattern
+#### Pattern
 
 [word 1]\_[word 2]
 
-##### Examples
+#### Examples
 
 "catalog\_number", "taxon", "preparation", "event\_field\_number"
 
@@ -76,7 +76,7 @@ Write all object names in lowercase alphanumeric characters and use underscore "
 
 Every object should have a singular English name and be in present tense.
 
-##### Examples
+#### Examples
 
 "person", not "persons"  or "people", "information\_source", not "information\_sources"
 
@@ -120,11 +120,11 @@ You should explicitly name each object. Default system-generated names are only 
 
 Foreign key field names should be a combination of the relation type, the referenced table and the name of the referenced field.
 
-##### Pattern
+#### Pattern
 
  [relation type]\_[parent table name]\_id
 
-##### Example
+#### Example
 
 collector\_agent\_id,
 
@@ -132,11 +132,11 @@ collector\_agent\_id,
 
 Index names should include both the table name and the column name(s). Table and first column should be separated by "\_ix\_"
 
-##### Pattern
+#### Pattern
 
 [table name]\_ix\_[first column name]\_[second column name]…
 
-##### Example
+#### Example
 
 person\_ix\_first\_name\_last\_name
 
@@ -144,7 +144,7 @@ person\_ix\_first\_name\_last\_name
 
 Constraints should be explicitly named. Every constraint name must be unique. Constraints should have a standardized prefix (the exception to the no-prefix rule).
 
-##### Pattern
+#### Pattern
 
 **Primary key constraints** : pk\_[table name]
 
