@@ -10,7 +10,7 @@ The purpose of the DINA collections data model is to store information about nat
 
 ## Schema setup
 
-- **Schema name** : dina
+- **Schema name** : dina_collections
 
 - **Database management system** : MySQL
 
