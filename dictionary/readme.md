@@ -2,12 +2,12 @@
 
 This folder contains a manually created data dictionary that describes the data elements (tables and columns) that are used/has been used/will be used in the DINA collections data model. This data dictionary is primarily intended to guide the development of the database schema.
 
-Data elements are approved for use in the model when they have a specific version set (not "suggestion next" or "future") and they are then active until a removed_version is set. When a version is set for a data element, all mandatory information (according to the specification) should be set for the element.
+Data elements are approved for use in the model when they have a version set and they are then active until a removed_version is set. When a version is set for a data element, all mandatory information (according to the specification) should be set for the element.
 
 ### Specification
 The data dictionary is divided in two files, one for data columns and one for tables.
 
-* `version` - The version from which the data element is used. If no version is decided, use "future". If the element is a suggestion for the next upciming version, use "next".
+* `version` - The version from which the data element is used. If no version is decided, use "future". If the element is a suggestion for the next upciming version, use "suggested next".
   * Applies to: tables, columns
 
 * `removed_version` - The version from which the data element is no longer used.
