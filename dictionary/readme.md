@@ -17,7 +17,7 @@ The data dictionary is divided in two files, one for data columns and one for ta
   * Applies to: tables, columns
 
 * `column_name` - The column name for this data element in the target table.
-  * Applies to: tables, columns
+  * Applies to: columns
   * Optional
 
 * `display_name` - Suggested default display name. Not mandatory.
