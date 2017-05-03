@@ -38,7 +38,7 @@ next,,individual_group,individual_group_type,,A text describing the type of indi
 next,,individual_group,individual_count,,An integer representing the number of individuals in this individual group.,,,,,,,,,,,,,,,
 future,,individual_group,life_history,life history description,A text description of the life history for this individual group.,,,,Y,,,,,,,,,,,
 next,,material_sample,id,,Auto-incrementing surrogate primary key.,,,,N,,,PK,,,,,,,,
-next,,material_sample,belongs_to_preparation_ id,,Key to the preparation that this material sample belongs to.,,,,N,,,FK,dina,dina_collections,preparation,id,,,,
+next,,material_sample,belongs_to_preparation_id,,Key to the preparation that this material sample belongs to.,,,,N,,,FK,dina,dina_collections,preparation,id,,,,
 next,,material_sample,is_derived_from_collected_unit_id ,,Key to the collected unit that this material was derived from.,,,,Y,,,FK,dina,dina_collections,collected_unit,id,,,,
 next,,material_sample,is_physical_unit_id,,Key to this material sample’s physical unit.,,,,N,,,FK,dina,dina_collections,physical_unit,id,,,,
 next,,material_sample,sample_type,sample type,The type of sample that this material sample is.,,,,,,”dried plant”,,,,,,,,,
