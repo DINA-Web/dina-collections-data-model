@@ -6,9 +6,9 @@ The model in xml format can be viewed and edited using [draw.io](https://www.dra
 
 ## Quicklinks to view/edit conceptual model xml-files (master) on draw.io
 
-**Full model**: dina-collections-conceptual-model.xml
-
-https://www.draw.io/#HDINA-Web%2Fdina-collections-data-model%2Fmaster%2Fmodel%2Fdina-collections-conceptual-model.xml
+### Full model
+**File**: dina-collections-conceptual-model.xml  
+**Link**: https://www.draw.io/#HDINA-Web%2Fdina-collections-data-model%2Fmaster%2Fmodel%2Fdina-collections-conceptual-model.xml
 
 
 
