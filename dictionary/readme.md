@@ -2,7 +2,7 @@
 
 This folder contains a manually created data dictionary that describes the data elements (tables and columns) that are used/has been used/will be used in the DINA collections data model. This data dictionary is primarily intended to guide the development of the database schema.
 
-Data elements are approved for use in the model when they have a specific version set (not "suggestion next" or "future") and they are then active until a removed_version is set. When a version is set for a data element, all mandatory information (according to the specification) should be set for the element.
+Data elements are approved for use in the model when they have a specific version set (not "suggestion next" or "future") and they are then active until a removed_version is set. When a version is set for a data element, all mandatory information (according to the specification) should be set for the element. If there is info that applies, "NA" should be used.
 
 ### Specification
 The data dictionary is divided in two files, one for data columns and one for tables.
@@ -72,6 +72,10 @@ to 3 decimal places).
 * `source_datatype`
   * Applies to: columns
   * Optional without `key` value "FK"
+
+* `term_reference` - Reference to a "DINA collections term" that this element corresponds to.
+  * Applies to: tables, columns
+  * Optional
 
 * `comments` - Comments about the data element.
   * Applies to: tables, columns
