@@ -7,7 +7,7 @@ Data elements are approved for use in the model when they have a specific versio
 ### Specification
 The data dictionary is divided in two files, one for data columns and one for tables.
 
-* `version` - The version from which the data element is used. If no version is decided, use "future". If the element is a suggestion for the next upciming version, use "next".
+* `version` - The version from which the data element is used. If no version is decided, use "future". If the element is a suggestion for the next upcoming version, use "next".
   * Applies to: tables, columns
 
 * `removed_version` - The version from which the data element is no longer used.
@@ -17,7 +17,7 @@ The data dictionary is divided in two files, one for data columns and one for ta
   * Applies to: tables, columns
 
 * `column_name` - The column name for this data element in the target table.
-  * Applies to: tables, columns
+  * Applies to: columns
   * Optional
 
 * `display_name` - Suggested default display name. Not mandatory.
@@ -53,23 +53,23 @@ to 3 decimal places).
   * Applies to: columns
   * Optional
 
-* `source_system` -
+* `source_system` - The source system for this foreign key (could the be the current DINA system as well as an external one).
   * Applies to: columns
   * Optional without `key` value "FK"
 
-* `source_schema`
+* `source_schema` - The source schema for this foreign key.
   * Applies to: columns
   * Optional without `key` value "FK"
 
-* `source_table`
+* `source_table`- The table in the source system for this foreign key.
   * Applies to: columns
   * Optional without `key` value "FK"
 
-* `source_field_name`
+* `source_field_name` - The name of the column in the source table, for this foreign key.
   * Applies to: columns
   * Optional without `key` value "FK"
 
-* `source_datatype`
+* `source_datatype` - The data type of the column in the source table, for this foreign key.
   * Applies to: columns
   * Optional without `key` value "FK"
 
