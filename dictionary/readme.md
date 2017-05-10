@@ -53,23 +53,23 @@ to 3 decimal places).
   * Applies to: columns
   * Optional
 
-* `source_system` -
+* `source_system` - The source system for this foreign key (could the be the current DINA system as well as an external one).
   * Applies to: columns
   * Optional without `key` value "FK"
 
-* `source_schema`
+* `source_schema` - The source schema for this foreign key.
   * Applies to: columns
   * Optional without `key` value "FK"
 
-* `source_table`
+* `source_table`- The table in the source system for this foreign key.
   * Applies to: columns
   * Optional without `key` value "FK"
 
-* `source_field_name`
+* `source_field_name` - The name of the column in the source table, for this foreign key.
   * Applies to: columns
   * Optional without `key` value "FK"
 
-* `source_datatype`
+* `source_datatype` - The data type of the column in the source table, for this foreign key.
   * Applies to: columns
   * Optional without `key` value "FK"
 
