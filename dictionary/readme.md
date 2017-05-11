@@ -73,15 +73,7 @@ to 3 decimal places).
   * Applies to: columns
   * Optional without `key` value "FK"
 
-* `term_reference` - Reference to a "DINA collections term" that this element corresponds to.
-  * Applies to: tables, columns
-  * Optional
-
 * `comments` - Comments about the data element.
-  * Applies to: tables, columns
-  * Optional
-
-* `history_references` - References to superseded data elements, etc.
   * Applies to: tables, columns
   * Optional
 
