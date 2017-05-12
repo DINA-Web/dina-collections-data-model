@@ -1,16 +1,16 @@
-version,removed_version,table_name,display_name,description,comments,date_modified
-next,NA,cataloged_unit,cataloged unit,A set of identifiable units listed under the same catalog number.,NA,2017-05-11
-next,NA,collecting_event,collecting event,The event (time and location) when the collecting took place.,NA,2017-05-11
-next,NA,collected_unit,collected unit,The smallest unit distinguished during (or in association with) the collecting event.,NA,2017-05-11
-next,NA,event,event,A thing that happens or takes place at a given time and location.,NA,2017-05-11
-next,NA,identification,identification,A statement about a specimen’s taxon name and/or type status.,NA,2017-05-11
-next,NA,identifiable_unit,identifiable unit,"The smallest recognized (not recognisable) ”thing” in the collection, either explicitly labelled with an identifier or implicitly understood as a separate unit based on its characteristics.",NA,2017-05-11
-next,NA,individual_group,individual group,One or more individuals with a single set of individual characteristics.,NA,2017-05-11
-next,NA,material_sample,material sample,"The smallest distinguished physical ”thing” in the collection, which is assumed to be a result of a single collecting event.",NA,2017-05-11
-next,NA,observation,observation,"The data measured, collected, perceived or noticed by an agent (e.g. a person or a machine) for a particular observation type during a single event.",NA,2017-05-11
-next,NA,observation_type,observation type,The kind of observation.,This determines the units and datatypes of an observation.,2017-05-11
-next,NA,physical_unit,physical unit,A physical assemblage containing one or more ”things” in the collection.,NA,2017-05-11
-next,NA,transcribed_content,transcribed content,"A text that is transcribed from any kind of original source (labels, field notebooks, phone calls, emails, etc.)",NA,2017-05-11
-future,NA,measurement,measurement,,,
-future,NA,transaction_unit,transaction unit,The participation of one or more material samples in a transaction (e.g. a loan).,,
-future,NA,event_log_item,event log item,,Needs o be investigated in a research and design document.,
+version_planned,version_added,version_removed,table_name,display_name,description,comments,date_modified
+0.1,,NA,cataloged_unit,cataloged unit,A set of identifiable units listed under the same catalog number.,NA,2017-05-11
+0.1,,NA,collecting_event,collecting event,The event (time and location) when the collecting took place.,NA,2017-05-11
+0.1,,NA,collected_unit,collected unit,The smallest unit distinguished during (or in association with) the collecting event.,NA,2017-05-11
+0.1,,NA,event,event,A thing that happens or takes place at a given time and location.,NA,2017-05-11
+0.1,,NA,identification,identification,A statement about a specimen’s taxon name and/or type status.,NA,2017-05-11
+0.1,,NA,identifiable_unit,identifiable unit,"The smallest recognized (not recognisable) ”thing” in the collection, either explicitly labelled with an identifier or implicitly understood as a separate unit based on its characteristics.",NA,2017-05-11
+0.1,,NA,individual_group,individual group,One or more individuals with a single set of individual characteristics.,NA,2017-05-11
+0.1,,NA,material_sample,material sample,"The smallest distinguished physical ”thing” in the collection, which is assumed to be a result of a single collecting event.",NA,2017-05-11
+0.1,,NA,observation,observation,"The data measured, collected, perceived or noticed by an agent (e.g. a person or a machine) for a particular observation type during a single event.",NA,2017-05-11
+0.1,,NA,observation_type,observation type,The kind of observation.,This determines the units and datatypes of an observation.,2017-05-11
+0.1,,NA,physical_unit,physical unit,A physical assemblage containing one or more ”things” in the collection.,NA,2017-05-11
+0.1,,NA,transcribed_content,transcribed content,"A text that is transcribed from any kind of original source (labels, field notebooks, phone calls, emails, etc.)",NA,2017-05-11
+NA,NA,NA,measurement,measurement,,,
+NA,NA,NA,transaction_unit,transaction unit,The participation of one or more material samples in a transaction (e.g. a loan).,,
+NA,NA,NA,event_log_item,event log item,,Needs o be investigated in a research and design document.,
