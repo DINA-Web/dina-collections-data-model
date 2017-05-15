@@ -7,10 +7,13 @@ Data elements are approved for use in the model when they have a specific versio
 ### Specification
 The data dictionary is divided in two files, one for data columns and one for tables.
 
-* `version` - The version from which the data element is used. If no version is decided, use "future". If the element is a suggestion for the next upcoming version, use "next".
+* `version_added` - The version from which the data element is planned to be used.
   * Applies to: tables, columns
 
-* `removed_version` - The version from which the data element is no longer used.
+* `version_planned` - The version from which the data element is used.
+    * Applies to: tables, columns
+
+* `version_removed` - The version from which the data element is no longer used.
     * Applies to: tables, columns
 
 * `table_name` - The table name for this data element in the target schema.
