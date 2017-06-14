@@ -63,5 +63,7 @@ NA,,NA,measurement,id,NA,Auto-incrementing surrogate primary key.,,,,N,,,PK,NA,N
 NA,,NA,transaction_unit,belongs_to_physical_unit_id,NA,Key to the physical unit to which this transaction unit belongs.,,,,,,,FK,dina,dina_collections,physical_unit,id,,,,
 NA,,NA,transaction_unit,id,NA,Auto-incrementing surrogate primary key.,,,,N,NA,,PK,NA,NA,NA,NA,NA,,,
 0.1,,NA,transcribed_content,id,NA,Auto-incrementing surrogate primary key.,bigint,20,NA,N,NA,NA,PK,NA,NA,NA,NA,NA,NA,NA,2017-06-14
-0.1,,NA,transcribed_content,is_of_transcribed_content type,NA,Key to the transcribed content type that this transcribed content is of.,bigint,20,NA,N,NA,NA,FK,dina,dina_collections,transcribed_content,id,int,NA,NA,2017-06-14
+0.1,,NA,transcribed_content,is_of_transcribed_content type,NA,Key to the transcribed content type that this transcribed content is of.,bigint,20,NA,N,NA,NA,FK,dina,dina_collections,transcribed_content_type,id,int,NA,NA,2017-06-14
 0.1,,NA,transcribed_content,transcript_text,transcript,"A text that has been transcribed from any kind of original source (labels, field notebooks, phone calls, emails, etc.)",text,NA,NA,N,NA,"”F. vesiculosus”, ”F. vesiculosus L.S. 21 S. Stavsudda, 1:a juli på stranden”",NA,NA,NA,NA,NA,NA,NA,https:/www.dina-project.net/wiki/TranscriptText,2017-06-14
+0.1,,NA,transcribed_content_type,id,NA,Auto-incrementing surrogate primary key.,bigint,20,NA,N,NA,NA,PK,NA,NA,NA,NA,NA,NA,NA,2017-06-14
+0.1,,NA,transcribed_content_type,transcribed_content_type_name,name,A text with the name of a defined transcribed content type.,,,,,,"”Full label”, ”Phone call”, ”Email”",NA,NA,NA,NA,NA,NA,NA,https://www.dina-project.net/wiki/TranscribedContentTypeName,2017-06-14
