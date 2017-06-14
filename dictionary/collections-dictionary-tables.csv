@@ -14,3 +14,4 @@ NA,NA,NA,measurement,measurement,,,,
 0.1,,NA,physical_unit,physical unit,The smallest recognized physical ”thing” in the collection.,NA,https://www.dina-project.net/wiki/PhysicalUnit,2017-06-14
 NA,NA,NA,transaction_unit,transaction unit,The participation of one or more material samples in a transaction (e.g. a loan).,,,
 0.1,,NA,transcribed_content,transcribed content,Information that has been transcribed as a single text string.,NA,https://www.dina-project.net/wiki/TranscribedContent,2017-06-14
+0.1,,NA,transcribed_content_type,transcribed content type,The type of transcribed content.,NA,https://www.dina-project.net/wiki/TranscribedContentType,2017-06-14
