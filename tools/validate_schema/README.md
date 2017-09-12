@@ -11,7 +11,7 @@ and [pandas](http://pandas.pydata.org). The code conform to the [PEP 8](https://
 You may consider installing the required Python packages 
 within a virtual environment in order to avoid cluttering your system's 
 Python path. See for example the environment management system 
-[conda](http://conda.pydata.org) or the package 
+[conda](http://conda.io) or the package 
 [virtualenv](https://virtualenv.pypa.io/en/latest/).
 
 
