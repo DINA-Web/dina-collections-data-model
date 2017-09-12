@@ -68,7 +68,7 @@ to 3 decimal places).
   * Applies to: columns
   * Optional without `key` value "FK"
 
-* `source_field_name` - The name of the column in the source table, for this foreign key.
+* `source_column` - The name of the column in the source table, for this foreign key.
   * Applies to: columns
   * Optional without `key` value "FK"
 
