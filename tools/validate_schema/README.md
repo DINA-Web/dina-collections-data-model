@@ -6,7 +6,7 @@ that has been specified in the data dictionary of this repository.
 
 The tool is written in Python 3 with dependencies on the third-party
 libraries [PyMySQL](https://pymysql.readthedocs.io/en/latest/index.html)
-and [pandas](http://pandas.pydata.org). The code conform to the [PEP 8](https://www.python.org/dev/peps/pep-0008/) style guide.
+and [pandas](http://pandas.pydata.org). The code conforms to the [PEP 8](https://www.python.org/dev/peps/pep-0008/) style guide.
 
 The script makes the following checks:
 
