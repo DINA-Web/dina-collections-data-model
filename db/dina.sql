@@ -53,7 +53,7 @@ DROP TABLE IF EXISTS `collected_unit`;
 CREATE TABLE `collected_unit` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `version` int(11) NOT NULL DEFAULT '1',
-  `collected_unit_field_nuber` varchar(255) DEFAULT NULL COMMENT 'An identifier assigned by the collection to this collected unit at the collecting event.',
+  `collected_unit_field_number` varchar(255) DEFAULT NULL COMMENT 'An identifier assigned by the collection to this collected unit at the collecting event.',
   `is_a_result_of_collecting_event_id` bigint(20) DEFAULT NULL COMMENT 'Key to the collecting event in which this collected unit was generated.',
   PRIMARY KEY (`id`),
   KEY `collected_unit_collecting_event_id_idx` (`is_a_result_of_collecting_event_id`),
@@ -143,7 +143,7 @@ CREATE TABLE `identifiable_unit` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `version` int(11) NOT NULL DEFAULT '1',
   `belongs_to_cataloged_unit_id` bigint(20) DEFAULT NULL COMMENT 'Key to the cataloged unit to which this identifiable unit belongs.',
-  `belongs_to_physical_unit` bigint(20) NOT NULL COMMENT 'Key to the physical unit to which this identifiable unit belongs.',
+  `belongs_to_physical_unit_id` bigint(20) NOT NULL COMMENT 'Key to the physical unit to which this identifiable unit belongs.',
   `identifiable_unit_text` text COMMENT 'A text describing this identifiable unit, in any chosen format. For example it’s location in relation to other identifiable units.',
   `is_represented_by_individual_group_id` bigint(20) DEFAULT NULL COMMENT 'Key to the individual group this identifiable unit is represented by.',
   `parent_identifiable_unit_id` bigint(20) DEFAULT NULL COMMENT 'Key to the identifiable unit that is a parent of this identifiable unit.',
@@ -151,12 +151,12 @@ CREATE TABLE `identifiable_unit` (
   UNIQUE KEY `id_UNIQUE` (`id`),
   KEY `identifiable_unit_cataloged_unit_id_idx` (`belongs_to_cataloged_unit_id`),
   KEY `identifiable_unit_indivudl_group_id_idx` (`is_represented_by_individual_group_id`),
-  KEY `identifiable_unit_physical_unit_id_idx` (`belongs_to_physical_unit`),
+  KEY `identifiable_unit_physical_unit_id_idx` (`belongs_to_physical_unit_id`),
   KEY `identifiable_uint_parent_identifiable_unit_id_idx` (`parent_identifiable_unit_id`),
   CONSTRAINT `identifiable_uint_parent_identifiable_unit_id` FOREIGN KEY (`parent_identifiable_unit_id`) REFERENCES `identifiable_unit` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `identifiable_unit_cataloged_unit_id` FOREIGN KEY (`belongs_to_cataloged_unit_id`) REFERENCES `cataloged_unit` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   CONSTRAINT `identifiable_unit_indivudl_group_id` FOREIGN KEY (`is_represented_by_individual_group_id`) REFERENCES `individual_group` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `identifiable_unit_physical_unit_id` FOREIGN KEY (`belongs_to_physical_unit`) REFERENCES `physical_unit` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+  CONSTRAINT `identifiable_unit_physical_unit_id` FOREIGN KEY (`belongs_to_physical_unit_id`) REFERENCES `physical_unit` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -275,7 +275,7 @@ CREATE TABLE `observation` (
   `is_of_observation_type_id` bigint(20) NOT NULL COMMENT 'Key to the observation_type that this observation is of.',
   `is_documented_in_transcribed_content_id` bigint(20) DEFAULT NULL COMMENT 'Key to the transcribed content in which this observation is documented.',
   `observation_text` text COMMENT 'A text string describing the observation, in any chosen format.',
-  `observaed_by_text` varchar(255) DEFAULT NULL COMMENT 'A text describing the agent(s) (person(s), group(s), machine(s) etc.) that made an observation, in any chosen format.',
+  `observed_by_text` varchar(255) DEFAULT NULL COMMENT 'A text describing the agent(s) (person(s), group(s), machine(s) etc.) that made an observation, in any chosen format.',
   PRIMARY KEY (`id`),
   UNIQUE KEY `id_UNIQUE` (`id`),
   KEY `observation_collecting_event_id_idx` (`applies_to_collecting_event_id`),
@@ -366,11 +366,11 @@ DROP TABLE IF EXISTS `transcribed_content`;
 CREATE TABLE `transcribed_content` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `version` int(11) NOT NULL DEFAULT '1',
-  `is_of_transcribed_content_Type` bigint(20) NOT NULL COMMENT 'Key to the transcribed content type that this transcribed content is of.',
+  `is_of_transcribed_content_type` bigint(20) NOT NULL COMMENT 'Key to the transcribed content type that this transcribed content is of.',
   `transcript_text` text NOT NULL COMMENT 'A text that has been transcribed from any kind of original source (labels, field notebooks, phone calls, emails, etc.)',
   PRIMARY KEY (`id`),
-  KEY `transcribed_content_transcribed_content_type_id_idx` (`is_of_transcribed_content_Type`),
-  CONSTRAINT `transcribed_content_transcribed_content_type_id` FOREIGN KEY (`is_of_transcribed_content_Type`) REFERENCES `transcribed_content_type` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+  KEY `transcribed_content_transcribed_content_type_id_idx` (`is_of_transcribed_content_type`),
+  CONSTRAINT `transcribed_content_transcribed_content_type_id` FOREIGN KEY (`is_of_transcribed_content_type`) REFERENCES `transcribed_content_type` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -415,4 +415,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-09-07 10:26:14
+-- Dump completed on 2017-09-12 15:08:24
