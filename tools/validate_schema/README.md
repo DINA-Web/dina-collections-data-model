@@ -13,7 +13,7 @@ The script makes the following checks:
 - that all tables exists
 - that all columns exists
 - that the referenced column is correct for each foreign key
-- that datatypes are correct for each column
+- that datatype is correct for each column
 
 
 ## Installing required packages
