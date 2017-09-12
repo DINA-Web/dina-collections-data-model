@@ -10,8 +10,8 @@ and [pandas](http://pandas.pydata.org). The code conforms to the [PEP 8](https:/
 
 The script makes the following checks:
 
-- that all tables exists
-- that all columns exists
+- that all tables exist
+- that all columns exist
 - that the referenced column is correct for each foreign key
 - that datatype is correct for each column
 
