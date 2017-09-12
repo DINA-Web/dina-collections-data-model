@@ -8,17 +8,24 @@ The tool is written in Python 3 with dependencies on the third-party
 libraries [PyMySQL](https://pymysql.readthedocs.io/en/latest/index.html)
 and [pandas](http://pandas.pydata.org). The code conform to the [PEP 8](https://www.python.org/dev/peps/pep-0008/) style guide.
 
-You may consider installing the required Python packages 
-within a virtual environment in order to avoid cluttering your system's 
-Python path. See for example the environment management system 
-[conda](http://conda.io) or the package 
-[virtualenv](https://virtualenv.pypa.io/en/latest/).
+The script makes the following checks:
+
+- that all tables exists
+- that all columns exists
+- that the referenced column is correct for each foreign key
+- that datatypes are correct for each column
 
 
 ## Installing required packages
 
     $ pip install PyMySQL
     $ pip install pandas
+
+You may consider installing the required Python packages 
+within a virtual environment in order to avoid cluttering your system's 
+Python path. See for example the environment management system 
+[conda](http://conda.io) or the package 
+[virtualenv](https://virtualenv.pypa.io/en/latest/).
 
 
 ## Usage
