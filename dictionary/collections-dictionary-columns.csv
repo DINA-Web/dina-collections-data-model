@@ -27,7 +27,7 @@ NA,,NA,event,start_year,start year,The integer year on which the event started.,
 0.1,,NA,identifiable_unit,is_represented_by_individual_group_id,NA,Key to the individual group this identifiable unit is represented by.,bigint,20,NA,Y,NULL,NA,FK,dina,dina_collections,individual_group,id,int,NA,NA,2017-06-14
 NA,,NA,identifiable_unit,parent_identifiable_unit_id,NA,Key to the identifiable unit that is a parent of this identifiable unit.,,,,Y,NULL,NA,NA,NA,NA,NA,NA,NA,,,
 0.1,,NA,identification,id,NA,Auto-incrementing surrogate primary key.,bigint,20,NA,N,NA,NA,PK,NA,NA,NA,NA,NA,NA,NA,2017-06-14
-NA,,NA,identification,is_original_identification_by_collector,NA,A boolean value indicating whether the identification is the original determination made by the collector(s).,,,,Y,NULL,,NA,NA,NA,NA,NA,NA,,,
+NA,,NA,identification,is_original_identification_by_collector,NA,A boolean value indicating whether the identification is the original determination made by the collector(s).,tinyint,1,NA,Y,NULL,"”TRUE”, ”FALSE”",NA,NA,NA,NA,NA,NA,,,
 0.1,,NA,identification,observation_id,NA,Key to his identification’s observation.,bigint,20,NA,N,NA,NA,FK,dina,dina_collections,observation,id,int,NA,NA,2017-05-11
 NA,,NA,identification,sequential_number,,"An integer, starting at 1, indicating the relative position in time for the identification event. The latest event has the highest value.",,,,N,,"”1”, ”10”, ”22”",NA,NA,NA,NA,NA,NA,,,
 0.1,,NA,individual_group,id,NA,Auto-incrementing surrogate primary key.,bigint,20,NA,N,NA,NA,PK,NA,NA,NA,NA,NA,NA,NA,2017-06-14
@@ -44,7 +44,7 @@ NA,,NA,measurement,id,NA,Auto-incrementing surrogate primary key.,,,,N,,,PK,NA,N
 0.1,,NA,observation,applies_to_collecting_event_id,NA,Key to the collecting_event to which this observation apply.,bigint,20,NA,Y,NULL,NA,FK,dina,dina_collections,collecting_event,id,int,NA,NA,2017-06-14
 0.1,,NA,observation,applies_to_individual_group_id,NA,Key to the individual group to which this observation apply.,bigint,20,NA,Y,NULL,NA,FK,dina,dina_collections,individual_group,id,int,NA,NA,2017-06-14
 0.1,,NA,observation,id,NA,Auto-incrementing surrogate primary key.,bigint,20,NA,N,NA,NA,PK,NA,NA,NA,NA,NA,NA,NA,2017-06-14
-0.1,,NA,observation,is_current,is current,A boolean indicating whether an observation is current or not.,boolean,NA,NA,N,FALSE,"”TRUE”, ”FALSE”",NA,NA,NA,NA,NA,NA,NA,https:/www.dina-project.net/wiki/IsCurrentObservation,2017-06-14
+0.1,,NA,observation,is_current,is current,A boolean indicating whether an observation is current or not.,tinyint,1,NA,N,FALSE,"”TRUE”, ”FALSE”",NA,NA,NA,NA,NA,NA,NA,https:/www.dina-project.net/wiki/IsCurrentObservation,2017-06-14
 0.1,,NA,observation,is_documented_in_transcribed_content_id,NA,Key to the transcribed content in which this observation is documented.,bigint,20,NA,Y,NULL,NA,FK,dina,dina_collections,transcribed_content,id,int,NA,NA,2017-06-14
 0.1,,NA,observation,is_of_observation_type_id,NA,Key to the observation_type that this observation is of.,bigint,20,NA,N,NA,NA,FK,dina,dina_collections,observation_type,id,int,NA,NA,2017-06-14
 0.1,,NA,observation,observation_text,observation description,"A text string describing the observation, in any chosen format.",text,NA,NA,Y,NULL,"”Fucus vesiculosus L.”, ”Shore”",NA,NA,NA,NA,NA,NA,NA,https:/www.dina-project.net/wiki/ObservationText,2017-06-14
