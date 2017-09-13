@@ -30,7 +30,7 @@ CREATE TABLE `cataloged_unit` (
   `takes_place_during_event_id` bigint(20) DEFAULT NULL COMMENT 'Key to the event during which this unit was cataloged.',
   PRIMARY KEY (`id`),
   KEY `cataloged_uint_event_id_idx` (`takes_place_during_event_id`),
-  CONSTRAINT `cataloged_uint_event_id` FOREIGN KEY (`takes_place_during_event_id`) REFERENCES `event` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+  CONSTRAINT `cataloged_uint_event_id` FOREIGN KEY (`takes_place_during_event_id`) REFERENCES `collecting_event` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -415,4 +415,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-09-12 15:08:24
+-- Dump completed on 2017-09-13  8:50:30
