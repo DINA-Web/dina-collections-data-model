@@ -1,19 +1,19 @@
 # validate_schema.py
 
 **validate_schema.py** is a command-line utility for checking that
-the DINA Collections database schema comply with proposed changes
-that has been specified in the data dictionary of this repository.
+the DINA Collections database schema complies with the specifications in
+the data dictionary in this repository.
 
 The tool is written in Python 3 with dependencies on the third-party
 libraries [PyMySQL](https://pymysql.readthedocs.io/en/latest/index.html)
 and [pandas](http://pandas.pydata.org). The code conforms to the [PEP 8](https://www.python.org/dev/peps/pep-0008/) style guide.
 
-The script makes the following checks:
+The script checks that:
 
-- that all tables exist
-- that all columns exist
-- that the referenced column is correct for each foreign key
-- that datatype is correct for each column
+- all tables exist
+- all columns exist
+- the referenced column is correct for each foreign key
+- datatype is correct for each column
 
 
 ## Installing required packages
@@ -41,11 +41,10 @@ Python path. See for example the environment management system
     positional arguments:
       database_name        MySQL database name
       version_planned      version planned
-    
+
     optional arguments:
       -h, --help           show this help message and exit
       -V, --version        show program's version number and exit
       --user USER          MySQL user (default: "root")
       --password PASSWORD  MySQL password
       --host HOST          database host (default: "localhost")
-
