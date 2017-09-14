@@ -103,6 +103,24 @@ def get_columns_spec(url, version_planned):
     return planned_columns
 
 
+def print_message(msg, items):
+    """
+    Print output message.
+
+    Parameters
+    ----------
+    msg : str
+        Text message.
+    items : list
+        Reported information items (e.g. table or column names).
+    """
+    print(msg)
+    if len(items) > 0:
+        print('  -', '\n  - '.join(items), '\n')
+    else:
+        print('  - None\n')
+
+
 def parse_args(args):
     parser = argparse.ArgumentParser(
         description=(
@@ -176,26 +194,10 @@ def main(args=None):
     wrong_data_types = list(planned_data_types[
         ~planned_data_types.isin(implemented_data_types)].dropna().values)
 
-    if len(tables_not_found) > 0:
-        print('Missing tables:')
-        print('  -', '\n  - '.join(tables_not_found))
-        print()
-
-    if len(columns_not_found) > 0:
-        print('Missing columns:')
-        print('  -', '\n  - '.join(columns_not_found))
-        print()
-
-    if len(relations_not_found) > 0:
-        print('Missing relations: (foreign key -> referenced column)')
-        print('  -', '\n  - '.join(relations_not_found))
-        print()
-
-    if len(wrong_data_types) > 0:
-        print('Wrong data types:')
-        print('  -', '\n  - '.join(wrong_data_types))
-        print()
-
+    print_message('Missing tables:', tables_not_found)
+    print_message('Missing columns:', columns_not_found)
+    print_message('Missing relations:', relations_not_found)
+    print_message('Wrong data types:', wrong_data_types)
 
 if __name__ == '__main__':
     main()
