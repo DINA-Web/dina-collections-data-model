@@ -196,8 +196,12 @@ def main(args=None):
 
     print_message('Missing tables:', tables_not_found)
     print_message('Missing columns:', columns_not_found)
-    print_message('Missing relations:', relations_not_found)
-    print_message('Wrong data types:', wrong_data_types)
+    print_message(
+        'Missing relations (column -> referenced column):',
+        relations_not_found)
+    print_message(
+        'Wrong data types (column [correct data type]):',
+        wrong_data_types)
 
 if __name__ == '__main__':
     main()
