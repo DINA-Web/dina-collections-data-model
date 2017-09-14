@@ -1,5 +1,9 @@
 # DINA collections data model: design principles and documentation
 
+Add
+- Describe how version numbers are modified and what v.0.1.1 means
+- Decision on starting with MySQL 
+
 ## This document
 
 The objective of this document is to describe the basic setup and design principles for the DINA collections data model. The primary target audience is database and system developers of the DINA system. It is a living documentation that should be updated according to the decisions within the team developing the DINA collections data model.
