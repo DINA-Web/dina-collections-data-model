@@ -42,6 +42,23 @@ COLUMNS_URL = (
 
 
 def get_schema_info(user, host, password, db, info_table):
+    """
+    Return a pandas DataFrame with information about the
+    implemented database schema.
+
+    Parameters
+    ----------
+    user : str
+        Username for the database.
+    host : str
+        Database host.
+    password : str
+        Password for the database.
+    db : str
+        Name of the database
+    info_table : str'
+        Name of the information table: 'columns' or 'key_column_usage'.
+    """
     connection = pymysql.connect(
         host=host, user=user, password=password, db=db,)
     sql = """SELECT *
@@ -65,6 +82,7 @@ def get_schema_info(user, host, password, db, info_table):
 
 
 def get_tables_spec(url, version_planned):
+    """Return a pandas DataFrame with table specifications."""
     tables_spec = pandas.read_csv(url, dtype=str)
     planned_tables = tables_spec[
         tables_spec.version_planned == version_planned]
@@ -72,6 +90,7 @@ def get_tables_spec(url, version_planned):
 
 
 def get_columns_spec(url, version_planned):
+    """Return a pandas DataFrame with column specifications."""
     columns_spec = pandas.read_csv(url, dtype=str)
     columns_spec['column_fullname'] = (
         columns_spec.table_name.fillna('') + '.' +
