@@ -6,7 +6,8 @@ the data dictionary in this repository.
 
 The tool is written in Python 3 with dependencies on the third-party
 libraries [PyMySQL](https://pymysql.readthedocs.io/en/latest/index.html)
-and [pandas](http://pandas.pydata.org). The code conforms to the [PEP 8](https://www.python.org/dev/peps/pep-0008/) style guide.
+and [pandas](http://pandas.pydata.org) and [pandas-validation](https://github.com/jmenglund/pandas-validation).
+The code conforms to the [PEP 8](https://www.python.org/dev/peps/pep-0008/) style guide.
 
 The script checks that:
 
@@ -20,11 +21,12 @@ The script checks that:
 
     $ pip install PyMySQL
     $ pip install pandas
+    $ pip install pandas-validation
 
-You may consider installing the required Python packages 
-within a virtual environment in order to avoid cluttering your system's 
-Python path. See for example the environment management system 
-[conda](http://conda.io) or the package 
+You may consider installing the required Python packages
+within a virtual environment in order to avoid cluttering your system's
+Python path. See for example the environment management system
+[conda](http://conda.io) or the package
 [virtualenv](https://virtualenv.pypa.io/en/latest/).
 
 
@@ -34,10 +36,10 @@ Python path. See for example the environment management system
     usage: validate_schema.py [-h] [-V] [--user USER] [--password PASSWORD]
                               [--host HOST]
                               database_name version_planned
-    
+
     Command-line utility for validating the DINA Collections database schema.
     YAML-formatted output is written to <stdout>.
-    
+
     positional arguments:
       database_name        MySQL database name
       version_planned      version planned
