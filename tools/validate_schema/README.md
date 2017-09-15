@@ -14,7 +14,7 @@ The script checks that:
 - all tables exist
 - all columns exist
 - the referenced column is correct for each foreign key
-- datatype is correct for each column
+- datatype (including size) is correct for each column
 
 
 ## Installing required packages

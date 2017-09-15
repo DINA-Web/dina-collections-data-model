@@ -10,8 +10,7 @@ with the specifications.
 # [x] table name
 # [x] column name
 # [ ] is nullable
-# [x] datatype
-# [ ] character max length
+# [x] datatype (including size)
 # [ ] unique constraint
 # [ ] default value
 # [ ] primary key
@@ -24,8 +23,11 @@ import argparse
 import getpass
 import sys
 
+import numpy as np
 import pandas
+import pandasvalidation as pv
 import pymysql
+
 
 
 __author__ = 'Markus Englund'
@@ -187,10 +189,12 @@ def main(args=None):
 
     implemented_data_types = (
         implemented_columns.COLUMN_FULLNAME + ' [' +
-        implemented_columns.DATA_TYPE + ']')
+        pv.to_string(implemented_columns.COLUMN_TYPE) + ']')
     planned_data_types = (
         planned_columns.column_fullname + ' [' +
-        planned_columns.data_type + ']')
+        planned_columns.data_type + '(' +
+        pv.to_string(planned_columns['size']) + ')]').replace(
+            '\(\)$', '', regex=True)
     wrong_data_types = list(planned_data_types[
         ~planned_data_types.isin(implemented_data_types)].dropna().values)
 
