@@ -96,8 +96,8 @@ def get_columns_spec(url, version_planned):
         columns_spec.table_name.fillna('') + '.' +
         columns_spec.column_name.fillna(''))
     columns_spec['referenced_fullname'] = (
-        columns_spec.source_table.fillna('') + '.' +
-        columns_spec.source_column.fillna(''))
+        columns_spec.referenced_table.fillna('') + '.' +
+        columns_spec.referenced_column.fillna(''))
     planned_columns = columns_spec[
         columns_spec.version_planned == version_planned]
     return planned_columns
