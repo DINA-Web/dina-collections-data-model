@@ -26,7 +26,7 @@ CREATE TABLE `cataloged_unit` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `version` int(11) NOT NULL DEFAULT '1',
   `catalog_number` varchar(50) NOT NULL COMMENT 'A unique identifier for a unit within a catalog',
-  `cataloged_by_text` varchar(225) DEFAULT NULL COMMENT 'A text string describing the name of the cataloger, in any chosen format',
+  `cataloged_by_text` varchar(255) DEFAULT NULL COMMENT 'A text string describing the name of the cataloger, in any chosen format',
   `takes_place_during_event_id` bigint(20) DEFAULT NULL COMMENT 'Key to the event during which this unit was cataloged.',
   PRIMARY KEY (`id`),
   KEY `cataloged_uint_event_id_idx` (`takes_place_during_event_id`),
@@ -415,4 +415,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-09-13  8:50:30
+-- Dump completed on 2017-09-18  9:14:55
