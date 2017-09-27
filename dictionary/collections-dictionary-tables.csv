@@ -1,20 +1,8 @@
 version_planned,version_added,version_removed,table_name,display_name,description,comments,term_reference,date_modified
 0.1,,NA,cataloged_unit,cataloged unit,A set of identifiable units listed under the same catalog number.,NA,https://www.dina-project.net/wiki/CatalogedUnit,2017-06-14
-NA,,NA,collected_unit,collected unit,The smallest unit distinguished during (or in association with) the collecting event.,NA,https://www.dina-project.net/wiki/CollectedUnit,2017-09-25
-NA,,NA,collecting_event,collecting event,The event (time and location) when the collecting took place.,NA,https://www.dina-project.net/wiki/CollectingEvent,2017-09-25
-NA,,NA,event,event,Something that happens or takes place at a certain time and location.,NA,https://www.dina-project.net/wiki/Event,2017-09-25
-NA,NA,NA,event_log_item,event log item,,Needs o be investigated in a research and design document.,,
-NA,,NA,identifiable_unit,identifiable unit,"The smallest recognized (not recognizable) “thing” in the collection, either explicitly labelled with an identifier or implicitly understood as a separate unit based on its characteristics.",NA,https://www.dina-project.net/wiki/IdentifiableUnit,2017-09-25
 0.1,,NA,identification,identification,"A statement about a specimen's taxon name and/or type status, which is not itself a type status designation.",NA,https://www.dina-project.net/wiki/Identification,2017-06-14
 0.1,,NA,individual_group,individual group,One or more individuals with a single set of individual characteristics.,NA,https://www.dina-project.net/wiki/IndividualGroup,2017-06-14
-NA,,NA,material_sample,material sample,"The smallest recognized physical ”thing” in the collection, which is supposed to be a result of a collecting event.",NA,https://www.dina-project.net/wiki/MaterialSample,2017-09-25
-NA,NA,NA,measurement,measurement,,,,
-NA,,NA,observation,observation,"The data measured, collected, perceived or noticed by an agent (e.g. a person or a machine) during a single event.",NA,https://www.dina-project.net/wiki/Observation,2017-09-25
-NA,,NA,observation_type,observation type,The kind of observation.,This determines the units and datatypes of an observation.,https://www.dina-project.net/wiki/ObservationType,2017-09-25
 0.1,,NA,physical_unit,physical unit,The smallest recognized physical ”thing” in the collection.,NA,https://www.dina-project.net/wiki/PhysicalUnit,2017-06-14
-NA,NA,NA,transaction_unit,transaction unit,The participation of one or more material samples in a transaction (e.g. a loan).,,,
-NA,,NA,transcribed_content,transcribed content,Information that has been transcribed as a single text string.,NA,https://www.dina-project.net/wiki/TranscribedContent,2017-09-25
-NA,,NA,transcribed_content_type,transcribed content type,The type of transcribed content.,NA,https://www.dina-project.net/wiki/TranscribedContentType,2017-09-25
 0.1,,NA,feature_observation,feature observation,"The data measured, collected, perceived or noticed for some property by an agent (e.g. a person or a machine) during a single event.",,,2017-09-25
 0.1,,NA,feature_observation_type,feature observation type,The kind of feature observation.,,,2017-09-25
 0.1,,NA,occurrence,occurrence,An existence of an IndividualGroup at a particular place at a particular time.,,,2017-09-25
