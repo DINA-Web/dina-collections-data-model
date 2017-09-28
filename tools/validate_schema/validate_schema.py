@@ -6,7 +6,8 @@ Validate that the DINA collections database schema conforms
 with the specifications.
 """
 
-# TODO validate:
+# TODO
+# Validate:
 # [x] table name
 # [x] column name
 # [ ] is nullable
@@ -17,7 +18,7 @@ with the specifications.
 # [x] foreign key constraint
 # [ ] column comment (i.e. the description)
 #
-# include system and schema in "referenced_fullname" and "REFERENCED_FULLNAME"
+# Include system and schema in "referenced_fullname" and "REFERENCED_FULLNAME"
 
 import argparse
 import getpass
@@ -83,15 +84,15 @@ def get_schema_info(user, host, password, db, info_table):
     return frame
 
 
-def get_tables_spec(url, version_planned):
+def get_tables_spec(url, version_accepted):
     """Return a pandas DataFrame with table specifications."""
     tables_spec = pandas.read_csv(url, dtype=str)
-    planned_tables = tables_spec[
-        tables_spec.version_planned == version_planned]
-    return planned_tables
+    accepted_tables = tables_spec[
+        tables_spec.version_accepted == version_accepted]
+    return accepted_tables
 
 
-def get_columns_spec(url, version_planned):
+def get_columns_spec(url, version_accepted):
     """Return a pandas DataFrame with column specifications."""
     columns_spec = pandas.read_csv(url, dtype=str)
     columns_spec['column_fullname'] = (
@@ -100,9 +101,9 @@ def get_columns_spec(url, version_planned):
     columns_spec['referenced_fullname'] = (
         columns_spec.referenced_table.fillna('') + '.' +
         columns_spec.referenced_column.fillna(''))
-    planned_columns = columns_spec[
-        columns_spec.version_planned == version_planned]
-    return planned_columns
+    accepted_columns = columns_spec[
+        columns_spec.version_accepted == version_accepted]
+    return accepted_columns
 
 
 def print_message(msg, items):
@@ -144,7 +145,7 @@ def parse_args(args):
     parser.add_argument(
         'database_name', type=str, action='store', help='MySQL database name')
     parser.add_argument(
-        'version_planned', type=str, action='store', help='version planned')
+        'version_accepted', type=str, action='store', help='version accepted')
     return parser.parse_args(args)
 
 
@@ -162,14 +163,14 @@ def main(args=None):
         user=parser.user, host=parser.host, password=password,
         db=parser.database_name, info_table='columns')
 
-    planned_tables = get_tables_spec(TABLES_URL, parser.version_planned)
-    tables_not_found = list(planned_tables.table_name[
-        ~planned_tables.table_name.isin(implemented_columns.TABLE_NAME)
+    accepted_tables = get_tables_spec(TABLES_URL, parser.version_accepted)
+    tables_not_found = list(accepted_tables.table_name[
+        ~accepted_tables.table_name.isin(implemented_columns.TABLE_NAME)
         ].values)
 
-    planned_columns = get_columns_spec(COLUMNS_URL, parser.version_planned)
-    columns_not_found = list(planned_columns.column_fullname[
-        ~planned_columns.column_fullname.isin(
+    accepted_columns = get_columns_spec(COLUMNS_URL, parser.version_accepted)
+    columns_not_found = list(accepted_columns.column_fullname[
+        ~accepted_columns.column_fullname.isin(
             implemented_columns.COLUMN_FULLNAME)].values)
 
     implemented_fks = get_schema_info(
@@ -179,24 +180,24 @@ def main(args=None):
         implemented_fks.COLUMN_FULLNAME + ' -> ' +
         implemented_fks.REFERENCED_FULLNAME)
 
-    planned_fks = planned_columns.loc[
-        planned_columns.key == 'FK',
+    accepted_fks = accepted_columns.loc[
+        accepted_columns.key == 'FK',
         ['column_fullname', 'referenced_fullname']]
-    planned_fks['relation'] = (
-        planned_fks.column_fullname + ' -> ' + planned_fks.referenced_fullname)
-    relations_not_found = list(planned_fks.relation[
-        ~planned_fks.relation.isin(implemented_fks.RELATION)].values)
+    accepted_fks['relation'] = (
+        accepted_fks.column_fullname + ' -> ' + accepted_fks.referenced_fullname)
+    relations_not_found = list(accepted_fks.relation[
+        ~accepted_fks.relation.isin(implemented_fks.RELATION)].values)
 
     implemented_data_types = (
         implemented_columns.COLUMN_FULLNAME + ' [' +
         pv.to_string(implemented_columns.COLUMN_TYPE) + ']')
-    planned_data_types = (
-        planned_columns.column_fullname + ' [' +
-        planned_columns.data_type + '(' +
-        pv.to_string(planned_columns['size']) + ')]').replace(
+    accepted_data_types = (
+        accepted_columns.column_fullname + ' [' +
+        accepted_columns.data_type + '(' +
+        pv.to_string(accepted_columns['size']) + ')]').replace(
             '\(\)$', '', regex=True)
-    wrong_data_types = list(planned_data_types[
-        ~planned_data_types.isin(implemented_data_types)].dropna().values)
+    wrong_data_types = list(accepted_data_types[
+        ~accepted_data_types.isin(implemented_data_types)].dropna().values)
 
     print_message('Missing tables:', tables_not_found)
     print_message('Missing columns:', columns_not_found)

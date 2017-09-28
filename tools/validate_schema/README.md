@@ -35,14 +35,14 @@ Python path. See for example the environment management system
     $ ./validate_schema.py -h
     usage: validate_schema.py [-h] [-V] [--user USER] [--password PASSWORD]
                               [--host HOST]
-                              database_name version_planned
+                              database_name version_accepted
 
     Command-line utility for validating the DINA Collections database schema.
     YAML-formatted output is written to <stdout>.
 
     positional arguments:
       database_name        MySQL database name
-      version_planned      version planned
+      version_accepted     version accepted
 
     optional arguments:
       -h, --help           show this help message and exit
