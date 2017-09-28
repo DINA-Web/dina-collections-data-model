@@ -1,8 +1,8 @@
-version_planned,version_added,version_removed,table_name,display_name,description,comments,term_reference,date_modified
-0.1.0,,NA,cataloged_unit,cataloged unit,A set of identifiable units listed under the same catalog number.,NA,https://www.dina-project.net/wiki/CatalogedUnit,2017-06-14
-0.1.0,,NA,identification,identification,"A statement about a specimen's taxon name and/or type status, which is not itself a type status designation.",NA,https://www.dina-project.net/wiki/Identification,2017-06-14
-0.1.0,,NA,individual_group,individual group,One or more individuals with a single set of individual characteristics.,NA,https://www.dina-project.net/wiki/IndividualGroup,2017-06-14
-0.1.0,,NA,physical_unit,physical unit,The smallest recognized physical ”thing” in the collection.,NA,https://www.dina-project.net/wiki/PhysicalUnit,2017-06-14
-0.1.0,,NA,feature_observation,feature observation,"The data measured, collected, perceived or noticed for some property by an agent (e.g. a person or a machine) during a single event.",NA,https://www.dina-project.net/wiki/FeatureObservation,2017-09-25
-0.1.0,,NA,feature_observation_type,feature observation type,The kind of feature observation.,NA,https://www.dina-project.net/wiki/FeatureObservationType,2017-09-25
-0.1.0,,NA,occurrence,occurrence,An existence of an IndividualGroup at a particular place at a particular time.,NA,https://www.dina-project.net/wiki/Occurrence,2017-09-25
+version_added,version_removed,table_name,display_name,description,comments,term_reference
+0.1.0,NA,cataloged_unit,cataloged unit,A set of identifiable units listed under the same catalog number.,NA,https://www.dina-project.net/wiki/CatalogedUnit.0
+0.1.0,NA,identification,identification,"A statement about a specimen's taxon name and/or type status, which is not itself a type status designation.",NA,https://www.dina-project.net/wiki/Identification.0
+0.1.0,NA,individual_group,individual group,One or more individuals with a single set of individual characteristics.,NA,https://www.dina-project.net/wiki/IndividualGroup.0
+0.1.0,NA,physical_unit,physical unit,The smallest recognized physical ”thing” in the collection.,NA,https://www.dina-project.net/wiki/PhysicalUnit.0
+0.1.0,NA,feature_observation,feature observation,"The data measured, collected, perceived or noticed for some property by an agent (e.g. a person or a machine) during a single event.",NA,https://www.dina-project.net/wiki/FeatureObservation.0
+0.1.0,NA,feature_observation_type,feature observation type,The kind of feature observation.,NA,https://www.dina-project.net/wiki/FeatureObservationType.0
+0.1.0,NA,occurrence,occurrence,An existence of an IndividualGroup at a particular place at a particular time.,NA,https://www.dina-project.net/wiki/Occurrence.0
