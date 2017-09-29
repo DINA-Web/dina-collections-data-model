@@ -47,8 +47,8 @@ Things to remember when making a new release of this repository.
 
 11. Export accepted and deprecated terms from the dina-project.net Wiki
     and store in the following files:
-    * `entities.csv`
-    * `attributes.csv`
+    * `model/entities.csv`
+    * `model/attributes.csv`
 
 12. Create pull request and merge the "version branch" into master.
 
