@@ -79,10 +79,10 @@ to 3 decimal places).
 * `comments` - Comments about the data element.
   * Applies to: tables, columns
   * Optional
-  
+
 * `term_reference` - URL reference to the DINA Collections term definition.
   * Applies to: tables, columns
   * Optional
-  
+
 * `date_modified` - Date when the data element was defined in present form.
   * Applies to: tables, columns
