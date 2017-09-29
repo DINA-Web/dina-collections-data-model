@@ -9,6 +9,7 @@ with the specifications.
 # TODO
 # Validate:
 # [x] table name
+# [ ] ordinal position
 # [x] column name
 # [ ] is nullable
 # [x] datatype (including size)
