@@ -30,17 +30,24 @@ Python path. See for example the environment management system
 
 ## Usage
 
+Clone this repository and and move to the directory with the script:
+
+    $ git clone https://github.com/DINA-Web/dina-collections-data-model.git
+    $ cd dina-collections-data-model/tools/pandas-validation
+
+Then, run the script:
+
     $ ./validate_schema.py -h
     usage: validate_schema.py [-h] [-V] [--user USER] [--password PASSWORD]
                               [--host HOST]
-                              database_name version_accepted
+                              database_name version_added
 
     Command-line utility for validating the DINA Collections database schema.
     YAML-formatted output is written to <stdout>.
 
     positional arguments:
       database_name        MySQL database name
-      version_accepted     version accepted
+      version_added        version added
 
     optional arguments:
       -h, --help           show this help message and exit
