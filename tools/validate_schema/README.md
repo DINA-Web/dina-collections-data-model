@@ -19,9 +19,7 @@ The script checks that:
 
 ## Installing required packages
 
-    $ pip install PyMySQL
-    $ pip install pandas
-    $ pip install pandas-validation
+    $ pip install PyMySQL pandas pandas-validation
 
 You may consider installing the required Python packages
 within a virtual environment in order to avoid cluttering your system's
