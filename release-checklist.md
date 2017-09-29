@@ -31,7 +31,7 @@ Things to remember when making a new release of this repository.
     changesets.
 
 7.  Make sure that that the schema complies with proposed changes.
-    This can be done manually or with the Python script
+    This can be done manually or preferably with the Python script
     `validate_schema.py`in the directory `tools/validate_schema/`.
 
 
