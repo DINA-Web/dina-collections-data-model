@@ -1,20 +1,27 @@
 ## Data dictionary for schema development
 
-This folder contains a manually created data dictionary that describes the data elements (tables and columns) that are used/has been used/will be used in the DINA collections data model. This data dictionary is primarily intended to guide the development of the database schema.
+This folder contains a manually created data dictionary that
+describes the data elements (tables and columns) that are used/has
+been used/will be used in the DINA collections data model. This data
+dictionary is primarily intended to guide the development of the
+database schema.
 
-Data elements are approved for use in the model when they have a specific version set (not "suggestion next" or "future") and they are then active until a removed_version is set. When a version is set for a data element, all mandatory information (according to the specification) should be set for the element. If there is info that applies, "NA" should be used.
+Data elements are approved for use in the model when they have a
+specific version set (version_added) and they are then active until a
+removed_version is set. When a version is set for a data element, all
+mandatory information (according to the specification) should be set
+for the element. If there is info that applies, "NA" should be used.
 
 ### Specification
-The data dictionary is divided in two files, one for data columns and one for tables.
+The data dictionary is divided in two files, one for data columns and
+one for tables.
 
-* `version_added` - The version from which the data element is planned to be used.
+* `version_added` - The version from which the data element is to be used.
   * Applies to: tables, columns
 
-* `version_planned` - The version from which the data element is used.
-    * Applies to: tables, columns
-
-* `version_removed` - The version from which the data element is no longer used.
-    * Applies to: tables, columns
+* `version_removed` - The version from which the data element is no
+  longer used.
+  * Applies to: tables, columns
 
 * `table_name` - The table name for this data element in the target schema.
   * Applies to: tables, columns
@@ -23,25 +30,26 @@ The data dictionary is divided in two files, one for data columns and one for ta
   * Applies to: columns
   * Optional
 
-* `display_name` - Suggested default display name. Not mandatory.
+* `display_name` - Suggested default display name.
   * Applies to: tables, columns
   * Optional
 
 * `description` - Description of the meaning of the data element.
   * Applies to: tables, columns
 
-* `datatype` - Datatype of the element.
+* `data_type` - Datatype of the element.
   * Applies to: columns
 
-* `size` - The maximum field length as measured in characters and the number of
-decimal places that must be maintained in the database.
+* `size` - The maximum field length as measured in characters and
+  the number of decimal places that must be maintained in the database.
   * Applies to: columns
 
-* `precision`  - The level to which the data element value will be reported (e.g.
-to 3 decimal places).
+* `precision`  - The level to which the data element value will be
+  reported (e.g. to 3 decimal places).
   * Applies to: columns
 
-* `null_allowed` -  If fields must contain data or not. If null is allowed, use "Y", otherwise use "N".
+* `null_allowed` -  If fields must contain data or not. If null is
+  allowed, use "Y", otherwise use "N".
   * Applies to: columns
 
 * `default_value` - A value that is predetermined (could be NULL).
@@ -56,23 +64,27 @@ to 3 decimal places).
   * Applies to: columns
   * Optional
 
-* `source_system` - The source system for this foreign key (could the be the current DINA system as well as an external one).
+* `referenced_system` - The referenced system for this foreign key
+(could the be the current DINA system as well as an external one).
   * Applies to: columns
   * Optional without `key` value "FK"
 
-* `source_schema` - The source schema for this foreign key.
+* `referenced_schema` - The source schema for this foreign key.
   * Applies to: columns
   * Optional without `key` value "FK"
 
-* `source_table`- The table in the source system for this foreign key.
+* `referenced_table`- The table in the referenced system for this
+  foreign key.
   * Applies to: columns
   * Optional without `key` value "FK"
 
-* `source_column` - The name of the column in the source table, for this foreign key.
+* `referenced_column` - The name of the column in the referenced
+  table, for this foreign key.
   * Applies to: columns
   * Optional without `key` value "FK"
 
-* `source_datatype` - The data type of the column in the source table, for this foreign key.
+* `referenced_datatype` - The data type of the column in the referenced
+  table, for this foreign key.
   * Applies to: columns
   * Optional without `key` value "FK"
 
