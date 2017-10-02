@@ -1,11 +1,9 @@
-Entity,Definition,Examples,"Internal annotation","Added in version","Removed in version","Term updated"
-CatalogedUnit,"A set of PhysicalUnits listed under the same catalog number.",,,,,
-FeatureObservation,"The data measured, collected, perceived or noticed for some property by an agent (e.g. a person or a machine) during a single event.","When a curator measures the wingspan and the weight of a bird, this counts as two separate observations.",,,,
-FeatureObservationType,"The kind of feature observation.","Wing span (in centimeter).",,,,
-Identification,"A statement about a specimen's taxon name and/or type status, which is not itself a type status designation.",,,,,
-IndividualGroup,"One or more individuals with a single set of individual characteristics.","''Ex.1.'' Group of three fishes in a jar of alcohol, with a determination written on the jar.<br />
+entity,label,definition,examples,internal_annotation,added_in_version,removed_in_version,term_updated
+CatalogedUnit.0,"Cataloged Unit","A set of PhysicalUnits listed under the same catalog number.",,,,,
+FeatureObservation.0,FeatureObservation,"The data measured, collected, perceived or noticed for some property by an agent (e.g. a person or a machine) during a single event.","When a curator measures the wingspan and the weight of a bird, this counts as two separate observations.",,,,
+FeatureObservationType.0,FeatureObservationType,"The kind of feature observation.","Wing span (in centimeter).",,,,
+Identification.0,Identification,"A statement about a specimen's taxon name and/or type status, which is not itself a type status designation.",,,,,
+IndividualGroup.0,IndividualGroup,"One or more individuals with a single set of individual characteristics.","''Ex.1.'' Group of three fishes in a jar of alcohol, with a determination written on the jar.<br />
 ''Ex.2.'' A skin and a skeleton from the same bird stored in separate locations.",,,,
-ObservationType,"The kind of observation.","''Ex. 1.'' Taxonomic identification.<br />
-''Ex. 2.'' Wing span (in centimeter).",,,,
-Occurrence,"An existence of an IndividualGroup at a particular place at a particular time. An Occurrence may coincide with a collecting event and/or a death event. The event is spatio-temporally restricted by the things that are assumed to have participated in the Occurrence.",,,,,
-PhysicalUnit,"The smallest recognized physical ”thing” in the collection.",,,,,
+Occurrence.0,Occurrence,"An existence of an IndividualGroup at a particular place at a particular time. An Occurrence may coincide with a collecting event and/or a death event. The event is spatio-temporally restricted by the things that are assumed to have participated in the Occurrence.",,,,,
+PhysicalUnit.0,PhysicalUnit,"The smallest recognized physical ”thing” in the collection.",,,,,
