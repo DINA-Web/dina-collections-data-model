@@ -34,7 +34,7 @@ import pymysql
 
 __author__ = 'Markus Englund'
 __license__ = 'AGPL-3.0'
-__version__ = ''
+__version__ = '0.2.0'
 
 
 TABLES_PATH = '../../dictionary/collections-dictionary-tables.csv'
