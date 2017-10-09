@@ -5,7 +5,7 @@ version_added,version_removed,table_name,ordinal_position,column_name,display_na
 0.2.0,NA,feature_observation,1,id,NA,Auto-incrementing surrogate primary key.,bigint,20,NA,N,NA,NA,PK,NA,NA,NA,NA,NA,NA
 0.2.0,NA,feature_observation,2,version,NA,NA,int,11,NA,N,1,NA,NA,dina,NA,NA,NA,NA,NA
 0.2.0,NA,feature_observation,3,applies_to_individual_group_id,NA,Key to the IndividualGroup to which this FeatureObservation applies.,bigint,20,NA,Y,NULL,NA,FK,dina,dina_collections,individual_group,id,NA,NA
-0.2.0,NA,feature_observation,4,is_of_feature_observation_type_id,NA,Key to the FeatureObservationType of the FeatureObservation.,bigint,20,NA,N,NA,NA,FK,dina,dina_collections,observation_type,id,NA,NA
+0.2.0,NA,feature_observation,4,is_of_feature_observation_type_id,NA,Key to the FeatureObservationType of the FeatureObservation.,bigint,20,NA,N,NA,NA,FK,dina,dina_collections,feature_observation_type,id,NA,NA
 0.2.0,NA,feature_observation,5,feature_observation_text,feature observation description,"A text describing the observation, in any chosen format.",text,NA,NA,Y,NULL,”shore” for describing a habitat,NA,NA,NA,NA,NA,NA,https:/www.dina-project.net/wiki/FeatureObservationText.0
 0.2.0,NA,feature_observation_type,1,id,NA,Auto-incrementing surrogate primary key.,bigint,20,NA,N,NA,NA,PK,NA,NA,NA,NA,NA,NA
 0.2.0,NA,feature_observation_type,2,version,NA,NA,int,11,NA,N,1,NA,NA,dina,NA,NA,NA,NA,NA
