@@ -29,6 +29,8 @@ Things to remember when making a new release of this repository.
 
 6.  Implement proposed changes in the schema by creating Liquibase
     changesets.
+    * Use XML for describing the changesets
+    * Store these in the `db`-directory
 
 7.  Make sure that that the schema complies with proposed changes.
     This can be done manually or preferably with the Python script
@@ -37,7 +39,7 @@ Things to remember when making a new release of this repository.
 
 ## After beta release of the collection manager
 
-8. Describe the changes to the data model in `CHANGELOG.md`.
+8. Describe the changes to the data model in `CHANGELOG.md` in a non-techical way
 
 9. Update the new terms on the dina-project.net Wiki:
     * Change "Status" from `next version` to `accepted`.
