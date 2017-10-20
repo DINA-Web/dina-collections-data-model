@@ -1,31 +1,31 @@
-version_added,version_removed,table_name,ordinal_position,column_name,display_name,description,data_type,size,precision,null_allowed,default_value,example_values,key,referenced_system,referenced_schema,referenced_table,referenced_column,comments,term_reference
-0.2.0,NA,cataloged_unit,1,id,NA,Auto-incrementing surrogate primary key.,bigint,20,NA,N,NA,NA,PK,NA,NA,NA,NA,NA,NA
-0.2.0,NA,cataloged_unit,2,version,NA,NA,int,11,NA,N,1,NA,NA,dina,NA,NA,NA,NA,NA
-0.2.0,NA,cataloged_unit,3,catalog_number,catalog number,A unique identifier for a unit within a catalog.,varchar,50,NA,N,NA,"""001"", ""20170001"", ""LIG_2015_075"", ""NHRS-SRAH000000720"",""CU31537""",NA,NA,NA,NA,NA,NA,https:/www.dina-project.net/wiki/CatalogNumber.0
-0.2.0,NA,feature_observation,1,id,NA,Auto-incrementing surrogate primary key.,bigint,20,NA,N,NA,NA,PK,NA,NA,NA,NA,NA,NA
-0.2.0,NA,feature_observation,2,version,NA,NA,int,11,NA,N,1,NA,NA,dina,NA,NA,NA,NA,NA
-0.2.0,NA,feature_observation,3,applies_to_individual_group_id,NA,Key to the IndividualGroup to which this FeatureObservation applies.,bigint,20,NA,Y,NULL,NA,FK,dina,dina_collections,individual_group,id,NA,NA
-0.2.0,NA,feature_observation,4,is_of_feature_observation_type_id,NA,Key to the FeatureObservationType of the FeatureObservation.,bigint,20,NA,N,NA,NA,FK,dina,dina_collections,feature_observation_type,id,NA,NA
-0.2.0,NA,feature_observation,5,feature_observation_text,feature observation description,"A text describing the observation, in any chosen format.",text,NA,NA,Y,NULL,”shore” for describing a habitat,NA,NA,NA,NA,NA,NA,https:/www.dina-project.net/wiki/FeatureObservationText.0
-0.2.0,NA,feature_observation_type,1,id,NA,Auto-incrementing surrogate primary key.,bigint,20,NA,N,NA,NA,PK,NA,NA,NA,NA,NA,NA
-0.2.0,NA,feature_observation_type,2,version,NA,NA,int,11,NA,N,1,NA,NA,dina,NA,NA,NA,NA,NA
-0.2.0,NA,feature_observation_type,3,feature_observation_type_name,feature observation type name,The name of a defined FeatureObservationType.,varchar,255,NA,N,NA,"”habitat”, wingspan (cm)”",NA,NA,NA,NA,NA,NA,https:/www.dina-project.net/wiki/FeatureObservationTypeName.0
-0.2.0,NA,identification,1,id,NA,Auto-incrementing surrogate primary key.,bigint,20,NA,N,NA,NA,PK,NA,NA,NA,NA,NA,NA
-0.2.0,NA,identification,2,version,NA,NA,int,11,NA,N,1,NA,NA,dina,NA,NA,NA,NA,NA
-0.2.0,NA,identification,3,applies_to_individual_group_id,NA,Key to the IndividualGroup to which this observation apply.,bigint,20,NA,N,NA,NA,FK,dina,dina_collections,individual_group,id,NA,NA
-0.2.0,NA,identification,4,identification_text,identification,"A text describing a single Identification (including e.g. taxon name, identified by, and identification date), in any chosen format.",text,NA,NA,Y,NULL,NA,NA,NA,NA,NA,NA,NA,https:/www.dina-project.net/wiki/IdentificationText.0
-0.2.0,NA,individual_group,1,id,NA,Auto-incrementing surrogate primary key.,bigint,20,NA,N,NA,NA,PK,NA,NA,NA,NA,NA,NA
-0.2.0,NA,individual_group,2,version,NA,NA,int,11,NA,N,1,NA,NA,dina,NA,NA,NA,NA,NA
-0.2.0,NA,occurrence,1,id,NA,Auto-incrementing surrogate primary key.,bigint,20,NA,N,NA,NA,PK,NA,NA,NA,NA,NA,NA
-0.2.0,NA,occurrence,2,version,NA,NA,int,11,NA,N,1,NA,NA,dina,NA,NA,NA,NA,NA
-0.2.0,NA,occurrence,3,involves_individual_group_id,NA,Key to the IndividualGroup involved in the occurrence.,bigint,20,NA,N,NA,NA,FK,dina,dina_collections,individual_group,id,NA,NA
-0.2.0,NA,occurrence,4,collectors_text,collector(s),A text describing the collector(s) in any chosen format.,text,NA,NA,Y,NULL,"”Peter Andersson”, ”Peter Andersson, Anne Andersson”",NA,NA,NA,NA,NA,NA,https:/www.dina-project.net/wiki/CollectorsText.0
-0.2.0,NA,occurrence,5,locality_text,locality description,"A text describing where the Occurrence took place, in any chosen format.",text,NA,NA,Y,NULL,"”Frescati”, ”Frescati, Stockholm”, ”Frescati, south of Stora Skuggan”",NA,NA,NA,NA,NA,NA,https:/www.dina-project.net/wiki/LocalityTextl.0
-0.2.0,NA,occurrence,6,occurrence_date_text,occurrence date description,"A text describing the date of the Occurrence, in any chosen format.",text,NA,NA,Y,NULL,"”beginning of June”, ”before 1800”, ”1990-01-02”, ”1990-01-02 to 1990-10-23”",NA,NA,NA,NA,NA,NA,https:/www.dina-project.net/wiki/OccurrenceDateText.0
-0.2.0,NA,physical_unit,1,id,NA,Auto-incrementing surrogate primary key.,bigint,20,NA,N,NA,NA,PK,NA,NA,NA,NA,NA,NA
-0.2.0,NA,physical_unit,2,version,NA,NA,int,11,NA,N,1,NA,NA,dina,NA,NA,NA,NA,NA
-0.2.0,NA,physical_unit,3,belongs_to_cataloged_unit_id,NA,Key to the CatalogedUnit to which this physical unit belongs.,bigint,20,NA,Y,NULL,NA,FK,dina,dina_collections,cataloged_unit,id,NA,NA
-0.2.0,NA,physical_unit,4,is_collected_at_occurrence_id,NA,Key to the Occurrence at which the material was collected.,bigint,20,NA,Y,NULL,NA,FK,dina,dina_collections,occurrence,id,NA,NA
-0.2.0,NA,physical_unit,5,represents_individual_group_id,NA,Key to the IndividualGroup this physical unit represent.,bigint,20,NA,Y,NULL,NA,FK,dina,dina_collections,individual_group,id,NA,NA
-0.2.0,NA,physical_unit,6,physical_unit_text,description,"A text describing the PhysicalUnit, in any chosen format.",text,NA,NA,Y,NULL,NA,NA,NA,NA,NA,NA,NA,https:/www.dina-project.net/wiki/PhysicalUnitText.0
-0.2.0,NA,physical_unit,7,normal_storage_location,normal storage location,"A text describing the normal physical storage location, in any chosen format.",text,NA,NA,Y,NULL,NA,NA,NA,NA,NA,NA,NA,https://www.dina-project.net/wiki/NormalStorageLocationText.0
+version_added,version_deprecated,version_removed,table_name,ordinal_position,column_name,display_name,description,data_type,size,precision,null_allowed,default_value,example_values,key,referenced_system,referenced_schema,referenced_table,referenced_column,comments,term_reference
+0.2.0,NA,NA,cataloged_unit,1,id,NA,Auto-incrementing surrogate primary key.,bigint,20,NA,N,NA,NA,PK,NA,NA,NA,NA,NA,NA
+0.2.0,NA,NA,cataloged_unit,2,version,NA,NA,int,11,NA,N,1,NA,NA,dina,NA,NA,NA,NA,NA
+0.2.0,NA,NA,cataloged_unit,3,catalog_number,catalog number,A unique identifier for a unit within a catalog.,varchar,50,NA,N,NA,"""001"", ""20170001"", ""LIG_2015_075"", ""NHRS-SRAH000000720"",""CU31537""",NA,NA,NA,NA,NA,NA,https:/www.dina-project.net/wiki/CatalogNumber.0
+0.2.0,NA,NA,feature_observation,1,id,NA,Auto-incrementing surrogate primary key.,bigint,20,NA,N,NA,NA,PK,NA,NA,NA,NA,NA,NA
+0.2.0,NA,NA,feature_observation,2,version,NA,NA,int,11,NA,N,1,NA,NA,dina,NA,NA,NA,NA,NA
+0.2.0,NA,NA,feature_observation,3,applies_to_individual_group_id,NA,Key to the IndividualGroup to which this FeatureObservation applies.,bigint,20,NA,Y,NULL,NA,FK,dina,dina_collections,individual_group,id,NA,NA
+0.2.0,NA,NA,feature_observation,4,is_of_feature_observation_type_id,NA,Key to the FeatureObservationType of the FeatureObservation.,bigint,20,NA,N,NA,NA,FK,dina,dina_collections,feature_observation_type,id,NA,NA
+0.2.0,NA,NA,feature_observation,5,feature_observation_text,feature observation description,"A text describing the observation, in any chosen format.",text,NA,NA,Y,NULL,”shore” for describing a habitat,NA,NA,NA,NA,NA,NA,https:/www.dina-project.net/wiki/FeatureObservationText.0
+0.2.0,NA,NA,feature_observation_type,1,id,NA,Auto-incrementing surrogate primary key.,bigint,20,NA,N,NA,NA,PK,NA,NA,NA,NA,NA,NA
+0.2.0,NA,NA,feature_observation_type,2,version,NA,NA,int,11,NA,N,1,NA,NA,dina,NA,NA,NA,NA,NA
+0.2.0,NA,NA,feature_observation_type,3,feature_observation_type_name,feature observation type name,The name of a defined FeatureObservationType.,varchar,255,NA,N,NA,"”habitat”, wingspan (cm)”",NA,NA,NA,NA,NA,NA,https:/www.dina-project.net/wiki/FeatureObservationTypeName.0
+0.2.0,NA,NA,identification,1,id,NA,Auto-incrementing surrogate primary key.,bigint,20,NA,N,NA,NA,PK,NA,NA,NA,NA,NA,NA
+0.2.0,NA,NA,identification,2,version,NA,NA,int,11,NA,N,1,NA,NA,dina,NA,NA,NA,NA,NA
+0.2.0,NA,NA,identification,3,applies_to_individual_group_id,NA,Key to the IndividualGroup to which this observation apply.,bigint,20,NA,N,NA,NA,FK,dina,dina_collections,individual_group,id,NA,NA
+0.2.0,NA,NA,identification,4,identification_text,identification,"A text describing a single Identification (including e.g. taxon name, identified by, and identification date), in any chosen format.",text,NA,NA,Y,NULL,NA,NA,NA,NA,NA,NA,NA,https:/www.dina-project.net/wiki/IdentificationText.0
+0.2.0,NA,NA,individual_group,1,id,NA,Auto-incrementing surrogate primary key.,bigint,20,NA,N,NA,NA,PK,NA,NA,NA,NA,NA,NA
+0.2.0,NA,NA,individual_group,2,version,NA,NA,int,11,NA,N,1,NA,NA,dina,NA,NA,NA,NA,NA
+0.2.0,NA,NA,occurrence,1,id,NA,Auto-incrementing surrogate primary key.,bigint,20,NA,N,NA,NA,PK,NA,NA,NA,NA,NA,NA
+0.2.0,NA,NA,occurrence,2,version,NA,NA,int,11,NA,N,1,NA,NA,dina,NA,NA,NA,NA,NA
+0.2.0,NA,NA,occurrence,3,involves_individual_group_id,NA,Key to the IndividualGroup involved in the occurrence.,bigint,20,NA,N,NA,NA,FK,dina,dina_collections,individual_group,id,NA,NA
+0.2.0,NA,NA,occurrence,4,collectors_text,collector(s),A text describing the collector(s) in any chosen format.,text,NA,NA,Y,NULL,"”Peter Andersson”, ”Peter Andersson, Anne Andersson”",NA,NA,NA,NA,NA,NA,https:/www.dina-project.net/wiki/CollectorsText.0
+0.2.0,NA,NA,occurrence,5,locality_text,locality description,"A text describing where the Occurrence took place, in any chosen format.",text,NA,NA,Y,NULL,"”Frescati”, ”Frescati, Stockholm”, ”Frescati, south of Stora Skuggan”",NA,NA,NA,NA,NA,NA,https:/www.dina-project.net/wiki/LocalityTextl.0
+0.2.0,NA,NA,occurrence,6,occurrence_date_text,occurrence date description,"A text describing the date of the Occurrence, in any chosen format.",text,NA,NA,Y,NULL,"”beginning of June”, ”before 1800”, ”1990-01-02”, ”1990-01-02 to 1990-10-23”",NA,NA,NA,NA,NA,NA,https:/www.dina-project.net/wiki/OccurrenceDateText.0
+0.2.0,NA,NA,physical_unit,1,id,NA,Auto-incrementing surrogate primary key.,bigint,20,NA,N,NA,NA,PK,NA,NA,NA,NA,NA,NA
+0.2.0,NA,NA,physical_unit,2,version,NA,NA,int,11,NA,N,1,NA,NA,dina,NA,NA,NA,NA,NA
+0.2.0,NA,NA,physical_unit,3,belongs_to_cataloged_unit_id,NA,Key to the CatalogedUnit to which this physical unit belongs.,bigint,20,NA,Y,NULL,NA,FK,dina,dina_collections,cataloged_unit,id,NA,NA
+0.2.0,NA,NA,physical_unit,4,is_collected_at_occurrence_id,NA,Key to the Occurrence at which the material was collected.,bigint,20,NA,Y,NULL,NA,FK,dina,dina_collections,occurrence,id,NA,NA
+0.2.0,NA,NA,physical_unit,5,represents_individual_group_id,NA,Key to the IndividualGroup this physical unit represent.,bigint,20,NA,Y,NULL,NA,FK,dina,dina_collections,individual_group,id,NA,NA
+0.2.0,NA,NA,physical_unit,6,physical_unit_text,description,"A text describing the PhysicalUnit, in any chosen format.",text,NA,NA,Y,NULL,NA,NA,NA,NA,NA,NA,NA,https:/www.dina-project.net/wiki/PhysicalUnitText.0
+0.2.0,NA,NA,physical_unit,7,normal_storage_location,normal storage location,"A text describing the normal physical storage location, in any chosen format.",text,NA,NA,Y,NULL,NA,NA,NA,NA,NA,NA,NA,https://www.dina-project.net/wiki/NormalStorageLocationText.0

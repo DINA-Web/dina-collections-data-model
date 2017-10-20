@@ -19,8 +19,10 @@ one for tables.
 * `version_added` - The version from which the data element is to be used.
   * Applies to: tables, columns
 
+* `version_deprecated`– The version from which the data element is deprecated.
+
 * `version_removed` - The version from which the data element is no
-  longer used.
+  longer available.
   * Applies to: tables, columns
 
 * `table_name` - The table name for this data element in the target schema.
