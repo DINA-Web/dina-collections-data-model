@@ -20,6 +20,7 @@ one for tables.
   * Applies to: tables, columns
 
 * `version_deprecated`– The version from which the data element is deprecated.
+  * Applies to: tables, columns
 
 * `version_removed` - The version from which the data element is no
   longer available.
