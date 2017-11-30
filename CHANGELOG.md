@@ -4,7 +4,7 @@
 ## 0.2.0 ##
 
 This is the initial release of the data model for DINA-Web.
-The model comprises 7 entities, 9 attributes and 7 relations (see below).
+The model comprises 7 entities, 10 attributes and 7 relations (see below).
 
 
 ### New entities
@@ -24,6 +24,7 @@ The model comprises 7 entities, 9 attributes and 7 relations (see below).
 * FeatureObservation.FeatureObservationText.0
 * FeatureObservationType.FeatureObservationTypeName.0
 * Identification.IdentificationText.0
+* IndividualGroup.IndividualGroupText.0
 * Occurrence.CollectorsText.0
 * Occurrence.LocalityText.0
 * Occurrence.OccurrenceDateText.0
