@@ -10,6 +10,7 @@ CollectorsText.0,CollectorsText,accepted,Occurrence.0,"A text describing the col
 FeatureObservationText.0,FeatureObservationText,accepted,FeatureObservation.0,"A text describing the observation, in any chosen format.","""12"" for wingspan in centimeter or ""female"" for sex.",,,,
 FeatureObservationTypeName.0,FeatureObservationTypeName,accepted,FeatureObservationType.0,"The name of a defined FeatureObservationType.","""habitat"", ""wingspan (cm)""",,,,
 IdentificationText.0,IdentificationText,accepted,Identification.0,"A text describing a single Identification (including e.g. taxon name, identified by, and identification date), in any chosen format.",,,,,
+IndividualGroupText.0,IndividualGroupText,accepted,IndividualGroup.0,"A text describing an IndividualGroup, in any chosen format.","""Female wolf""",,,,
 LocalityText.0,LocalityText,accepted,Occurrence.0,"A text describing where the Occurrence took place, in any chosen format.","''Ex. 1.'' Frescati<br />
 ''Ex. 2.'' Frescati, Stockholm<br />
 ''Ex. 3.'' Frescati, south of Stora Skuggan",,,,
