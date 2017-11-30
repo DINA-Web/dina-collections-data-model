@@ -29,7 +29,7 @@ The model comprises 7 entities, 10 attributes and 7 relations (see below).
 * Occurrence.LocalityText.0
 * Occurrence.OccurrenceDateText.0
 * PhysicalUnit.PhysicalUnitText.0
-* PhysicalUnit.NormalStorageLocation.0
+* PhysicalUnit.NormalStorageLocationText.0
 
 
 ### New relations
