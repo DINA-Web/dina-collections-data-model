@@ -60,7 +60,7 @@ The model comprises 7 entities, 9 attributes and 7 relations (see below).
 
 #### IndividualGroup <-> Occurrence
 
-* One and only One IndividualGroup *participates in* Zero or Many Occurrence.
+* One and only One IndividualGroup *participates in* Zero to Many Occurrence.
 * Zero to Many Occurrence *involves* One and only One IndividualGroup.
 
 
