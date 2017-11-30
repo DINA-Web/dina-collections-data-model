@@ -72,7 +72,8 @@ The model comprises 7 entities, 9 attributes and 7 relations (see below).
 
 #### Occurrence <-> PhysicalUnit
 
-Zero to One Occurrence *is origin for* Zero to Many PhysicalUnit.
+* Zero to One Occurrence *is origin for* Zero to Many PhysicalUnit.
+* Zero to Many PhysicalUnit *is collected at* Zero to One Occurrence.
 
 
 Released: 2017-11-30
