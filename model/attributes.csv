@@ -1,0 +1,18 @@
+attribute,label,status,entity,definition,examples,internal_annotation,added_in_version,removed_in_version,term_updated
+CatalogNumber.0,CatalogNumber,accepted,CatalogedUnit.0,"A unique identifier for a unit within a catalog.","''Ex. 1.'' 001<br />
+''Ex. 2.'' 20170001<br />
+''Ex. 3.'' LIG_2015_075<br />
+''Ex. 4.'' NHRS-SRAH00000072<br />
+''Ex. 5.'' CU31537",,,,
+CollectorsText.0,CollectorsText,accepted,Occurrence.0,"A text describing the collector(s), in any chosen format.","''Ex. 1.'' Peter Andersson<br />
+''Ex. 2.'' Peter Andersson, Anne Andersson<br />
+''Ex. 3.'' P. Andersson",,,,
+FeatureObservationText.0,FeatureObservationText,accepted,FeatureObservation.0,"A text describing the observation, in any chosen format.","""12"" for wingspan in centimeter or ""female"" for sex.",,,,
+FeatureObservationTypeName.0,FeatureObservationTypeName,accepted,FeatureObservationType.0,"The name of a defined FeatureObservationType.","""habitat"", ""wingspan (cm)""",,,,
+IdentificationText.0,IdentificationText,accepted,Identification.0,"A text describing a single Identification (including e.g. taxon name, identified by, and identification date), in any chosen format.",,,,,
+LocalityText.0,LocalityText,accepted,Occurrence.0,"A text describing where the Occurrence took place, in any chosen format.","''Ex. 1.'' Frescati<br />
+''Ex. 2.'' Frescati, Stockholm<br />
+''Ex. 3.'' Frescati, south of Stora Skuggan",,,,
+NormalStorageLocationText.0,NormalStorageLocationText,accepted,PhysicalUnit.0,"A text describing the normal physical storage location, in any chosen format.","""Cabinet 10, drawer 3""",,,,
+OccurenceDateText.0,OccurenceDateText,accepted,Occurrence.0,"A text describing the date of the Occurrence, in any chosen format.","""beginning of June"", ""before 1800"", ""1990-01-02"", ""1990-01-02 to 1990-10-23""",,,,
+PhysicalUnitText.0,PhysicalUnitText,accepted,PhysicalUnit.0,"A text describing the PhysicalUnit, in any chosen format.","""Mammal skin preparation""",,,,
