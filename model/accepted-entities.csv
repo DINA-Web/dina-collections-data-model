@@ -1,0 +1,7 @@
+entity,label,definition,examples,internal_annotation,added_in_version,removed_in_version,term_updated
+CatalogedUnit.0,CatalogedUnit,"A set of PhysicalUnits listed under the same catalog number.",,,,,
+FeatureObservation.0,FeatureObservation,"The data measured, collected, perceived or noticed for some property by an agent (e.g. a person or a machine) during a single event.","When a curator measures the wingspan and the weight of a bird, this counts as two separate observations.",,,,
+FeatureObservationType.0,FeatureObservationType,"The kind of FeatureObservation.","Wing span (in centimeter).",,,,
+Identification.0,Identification,"A statement about a specimen's taxon name and/or type status, which is not itself a type status designation.",,,,,
+Occurrence.0,Occurrence,"An existence of an IndividualGroup at a particular place at a particular time. An Occurrence may coincide with a collecting event and/or a death event. The event is spatio-temporally restricted by the things that are assumed to have participated in the Occurrence.",,,,,
+PhysicalUnit.0,PhysicalUnit,"The smallest recognized physical ”thing” in the collection.",,,,,
