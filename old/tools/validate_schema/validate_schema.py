@@ -6,8 +6,10 @@ Validate that the DINA collections database schema conforms
 with the specifications.
 """
 
-# TODO validate:
+# TODO
+# Validate:
 # [x] table name
+# [ ] ordinal position
 # [x] column name
 # [ ] is nullable
 # [x] datatype (including size)
@@ -17,7 +19,7 @@ with the specifications.
 # [x] foreign key constraint
 # [ ] column comment (i.e. the description)
 #
-# include system and schema in "referenced_fullname" and "REFERENCED_FULLNAME"
+# Include system and schema in "referenced_fullname" and "REFERENCED_FULLNAME"
 
 import argparse
 import getpass
@@ -32,15 +34,11 @@ import pymysql
 
 __author__ = 'Markus Englund'
 __license__ = 'AGPL-3.0'
-__version__ = '0.1.0'
+__version__ = '0.2.0'
 
 
-TABLES_URL = (
-    'https://raw.githubusercontent.com/DINA-Web/dina-collections-data-model/'
-    'master/dictionary/collections-dictionary-tables.csv')
-COLUMNS_URL = (
-    'https://raw.githubusercontent.com/DINA-Web/dina-collections-data-model/'
-    'master/dictionary/collections-dictionary-columns.csv')
+TABLES_PATH = '../../dictionary/collections-dictionary-tables.csv'
+COLUMNS_PATH = '../../dictionary/collections-dictionary-columns.csv'
 
 
 def get_schema_info(user, host, password, db, info_table):
@@ -83,26 +81,26 @@ def get_schema_info(user, host, password, db, info_table):
     return frame
 
 
-def get_tables_spec(url, version_planned):
+def get_tables_spec(path, version_added):
     """Return a pandas DataFrame with table specifications."""
-    tables_spec = pandas.read_csv(url, dtype=str)
-    planned_tables = tables_spec[
-        tables_spec.version_planned == version_planned]
-    return planned_tables
+    tables_spec = pandas.read_csv(path, dtype=str)
+    added_tables = tables_spec[
+        tables_spec.version_added == version_added]
+    return added_tables
 
 
-def get_columns_spec(url, version_planned):
+def get_columns_spec(path, version_added):
     """Return a pandas DataFrame with column specifications."""
-    columns_spec = pandas.read_csv(url, dtype=str)
+    columns_spec = pandas.read_csv(path, dtype=str)
     columns_spec['column_fullname'] = (
         columns_spec.table_name.fillna('') + '.' +
         columns_spec.column_name.fillna(''))
     columns_spec['referenced_fullname'] = (
         columns_spec.referenced_table.fillna('') + '.' +
         columns_spec.referenced_column.fillna(''))
-    planned_columns = columns_spec[
-        columns_spec.version_planned == version_planned]
-    return planned_columns
+    added_columns = columns_spec[
+        columns_spec.version_added == version_added]
+    return added_columns
 
 
 def print_message(msg, items):
@@ -144,7 +142,7 @@ def parse_args(args):
     parser.add_argument(
         'database_name', type=str, action='store', help='MySQL database name')
     parser.add_argument(
-        'version_planned', type=str, action='store', help='version planned')
+        'version_added', type=str, action='store', help='version added')
     return parser.parse_args(args)
 
 
@@ -162,14 +160,14 @@ def main(args=None):
         user=parser.user, host=parser.host, password=password,
         db=parser.database_name, info_table='columns')
 
-    planned_tables = get_tables_spec(TABLES_URL, parser.version_planned)
-    tables_not_found = list(planned_tables.table_name[
-        ~planned_tables.table_name.isin(implemented_columns.TABLE_NAME)
+    added_tables = get_tables_spec(TABLES_PATH, parser.version_added)
+    tables_not_found = list(added_tables.table_name[
+        ~added_tables.table_name.isin(implemented_columns.TABLE_NAME)
         ].values)
 
-    planned_columns = get_columns_spec(COLUMNS_URL, parser.version_planned)
-    columns_not_found = list(planned_columns.column_fullname[
-        ~planned_columns.column_fullname.isin(
+    added_columns = get_columns_spec(COLUMNS_PATH, parser.version_added)
+    columns_not_found = list(added_columns.column_fullname[
+        ~added_columns.column_fullname.isin(
             implemented_columns.COLUMN_FULLNAME)].values)
 
     implemented_fks = get_schema_info(
@@ -179,24 +177,24 @@ def main(args=None):
         implemented_fks.COLUMN_FULLNAME + ' -> ' +
         implemented_fks.REFERENCED_FULLNAME)
 
-    planned_fks = planned_columns.loc[
-        planned_columns.key == 'FK',
+    added_fks = added_columns.loc[
+        added_columns.key == 'FK',
         ['column_fullname', 'referenced_fullname']]
-    planned_fks['relation'] = (
-        planned_fks.column_fullname + ' -> ' + planned_fks.referenced_fullname)
-    relations_not_found = list(planned_fks.relation[
-        ~planned_fks.relation.isin(implemented_fks.RELATION)].values)
+    added_fks['relation'] = (
+        added_fks.column_fullname + ' -> ' + added_fks.referenced_fullname)
+    relations_not_found = list(added_fks.relation[
+        ~added_fks.relation.isin(implemented_fks.RELATION)].values)
 
     implemented_data_types = (
         implemented_columns.COLUMN_FULLNAME + ' [' +
         pv.to_string(implemented_columns.COLUMN_TYPE) + ']')
-    planned_data_types = (
-        planned_columns.column_fullname + ' [' +
-        planned_columns.data_type + '(' +
-        pv.to_string(planned_columns['size']) + ')]').replace(
+    added_data_types = (
+        added_columns.column_fullname + ' [' +
+        added_columns.data_type + '(' +
+        pv.to_string(added_columns['size']) + ')]').replace(
             '\(\)$', '', regex=True)
-    wrong_data_types = list(planned_data_types[
-        ~planned_data_types.isin(implemented_data_types)].dropna().values)
+    wrong_data_types = list(added_data_types[
+        ~added_data_types.isin(implemented_data_types)].dropna().values)
 
     print_message('Missing tables:', tables_not_found)
     print_message('Missing columns:', columns_not_found)
