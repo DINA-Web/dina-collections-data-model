@@ -12,9 +12,11 @@ Things to remember when making a new release of this repository.
 
 3. Update the new terms on the dina-project.net Wiki:
     * Change "Status" from `next version` to `accepted`.
+    * Add current date for "Term updated".
 
 4. Update the deprecated terms on the dina-project.net Wiki.
     * Add information for "Removed in version".
+    * Add current date for "Term updated".
 
 5. Export accepted and deprecated terms from the dina-project.net Wiki
     and store in the following files:
